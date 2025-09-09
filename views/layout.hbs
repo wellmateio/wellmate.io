@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+
+    <title>{{title}}</title>
+
+    <meta name="description"
+          content="Welcome to our health and diet-focused website. Explore expert tips on nutrition, fitness, and holistic well-being. Discover the benefits of a balanced diet, mindful eating, and a healthy lifestyle. Join us on the journey to better health and self-care.">
+    <meta name="keywords"
+          content="health, diet, nutrition, wellness, healthy lifestyle, balanced diet, fitness, well-being, nutrition tips, healthy eating, nutrient-rich foods, exercise, weight management, holistic health, mindful eating, plant-based diet, meal planning, superfoods, hydration, self-care, body and mind, lifestyle choices, cooking techniques, health education, personal growth">
+    <meta name="author" content="WellMate sp. z o.o."/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,800%7CSource+Sans+Pro:400,300,800,700,600"
+          rel="stylesheet" type="text/css"/>
+
+    <link href="/css/plugins.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWKTCNB8KK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-RWKTCNB8KK');
+    </script>
+</head>
+
+<body>
+<!-- Body Inner -->
+<div class="body-inner">
+    <!-- Header -->
+    <header id="header" class="header-always-fixed {{#unless menu_black}}{{/unless}}">
+        <div class="header-inner">
+            <div class="container">
+                <!--Logo-->
+                <div id="logo">
+                    <a href="/">
+                        <img src="/images/logo.svg" class="logo-default p-10">
+                        <img src="/images/logo.svg" class="logo-sticky p-10" >
+                    </a>
+                </div>
+                <!--End: Logo-->
+                <!-- Search -->
+                <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
+                        class="icon-x"></i></a>
+                    <form class="search-form" action="search-results-page.html" method="get">
+                        <input class="form-control" name="q" type="text" placeholder="Type & Search..."/>
+                        <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
+                    </form>
+                </div>
+                <!-- end: search -->
+                <!--Navigation Resposnive Trigger-->
+                <div id="mainMenu-trigger">
+                    <a class="lines-button x"><span class="lines"></span></a>
+                </div>
+                <div id="mainMenu" class="menu-one-page">
+                    <div class="container">
+                        <nav>
+                            <ul>
+                                <li><a href="{{#unless isRoot}}/{{/unless}}#header">Home</a></li>
+                                <li><a href="{{#unless isRoot}}/{{/unless}}#app">App</a></li>
+                                <li><a href="{{#unless isRoot}}/{{/unless}}#waitlist">waitlist</a></li>
+                                <li><a href="/mission">Our Mission</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="{{#unless isRoot}}/{{/unless}}#contact">Contact Us</a></li>
+                                <li><a href="https://blog.wellmate.io">Blog</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!--end: Navigation-->
+            </div>
+        </div>
+    </header>
+    {{{body}}}
+    <footer id="footer">
+        <div class="footer-content p-t-0 p-b-0"
+             style="background-image:url('/images/other/background-4.png'); background-position:71% 22%;">
+
+            <!-- Contact -->
+            <section id="contact" style="background: transparent;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2 class="m-b-10">Get in Touch with Us</h2>
+                                </div>
+                                <div class="col-lg-12 m-b-30">
+                                    <address>
+                                        <strong>Headquarters:</strong><br>
+                                        Elewatorska 9<br>
+                                        19-200 Grajewo<br>
+                                        Poland<br>
+                                    </address>
+                                    <strong>Email:</strong> <a href="mailto:first.last@example.com">info@wellmate.io</a>
+                                </div>
+                                <div class="col-lg-12 m-b-30">
+                                    <h4>We are social</h4>
+                                    <div class="social-icons social-icons-light social-icons-colored-hover">
+                                        <ul>
+                                            <li class="social-facebook"><a href="https://www.facebook.com/wellmate.io/"><i
+                                                    class="fab fa-facebook"></i></a></li>
+                                            <li class="social-instagram"><a
+                                                    href="https://www.instagram.com/wellmate.io/"><i
+                                                    class="fab fa-instagram"></i></a></li>
+                                            <li class="social-linkedin"><a
+                                                    href="https://www.linkedin.com/company/wellmate-io/"><i
+                                                    class="fab fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <form id="contact-form" class="widget-contact-form" action="/mail" role="form"
+                                  method="post">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="message-name">Name</label>
+                                        <input type="text" aria-required="true" required name="message-name"
+                                               minlength="3"
+                                               class="form-control required name"
+                                               placeholder="Enter your Name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="message-email">Email</label>
+                                        <input type="email" aria-required="true" required name="message-email"
+                                               pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                                               class="form-control required email"
+                                               placeholder="Enter your Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-message">Message</label>
+                                    <textarea type="text" required name="message-message" rows="8" minlength="20"
+                                              class="form-control required" placeholder="Enter your Message"></textarea>
+                                </div>
+                                <div class="row" style="line-height: 19px;">
+                                    <div class="form-group col-md-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="privacy" name="message-privacy"
+                                                   type="checkbox" required="">
+                                            <label class="form-check-label text-justify" for="message-privacy">
+                                                Filling this form means you agree for processing by WellMate sp. z o.o.
+                                                your personal data sent by this form in purpose to answer you for your
+                                                question and depends on question content sending you offer prepared for
+                                                your request.
+                                                <br>
+                                                <a href="/privacy-policy">You can get familiar who we are and how we
+                                                    process your data here.</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button id="send_button" class="btn btn-light"><i
+                                            class="fa fa-paper-plane"></i>&nbsp;Send message
+                                    </button>
+                                    <button id="sending_button" class="btn btn-light" disabled>
+                                            <span class="spinner-border spinner-border-sm" role="status"
+                                                  aria-hidden="true"></span>
+                                        Sending...
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end: Contact -->
+        </div>
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">&copy; 2023 <a href="//wellmate.io" target="_blank"
+                                                                       rel="noopener"> WellMate</a>. All Rights
+                    Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end: Footer -->
+    <!--Modal Cookie-->
+    <div id="cookieNotify" class="modal-strip cookie-notify background-dark" data-delay="1000" data-expire="1"
+         data-cookie-name="cookiebar2023_1" data-cookie-enabled="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 text-sm-center sm-center sm-m-b-10 m-t-5">
+                    <span>This website uses cookies to ensure you get the best experience on our website.</span>
+                    <a href="/cookie-policy" class="text-light">
+                        <span> <span>More info</span> <i class="fa fa-info-circle"></i></span>
+                    </a>
+                </div>
+                <div class="col-lg-2 text-right sm-text-center sm-center">
+                    <button type="button" class="btn btn-rounded btn-light btn-outline btn-sm m-r-10 modal-close">
+                        Decline
+                    </button>
+                    <button type="button" class="btn btn-rounded btn-light btn-sm modal-confirm">Got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End: Modal Cookie-->
+</div>
+<!-- end: Body Inner -->
+<!-- Scroll top -->
+<a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+
+<script src="https://www.google.com/recaptcha/api.js?render="></script>
+<!--Plugins-->
+<script src="/js/jquery.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/functions.js"></script>
+<script src="/js/custom.js"></script>
+
+<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+<link rel="stylesheet" type="text/css" href="plugins/slider-revolution/css/settings.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="plugins/slider-revolution/css/layers.css">
+<link rel="stylesheet" type="text/css" href="plugins/slider-revolution/css/navigation.css">
+
+
+<script type="text/javascript" src="plugins/slider-revolution/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="plugins/slider-revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+<script type="text/javascript"
+        src="plugins/slider-revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript"
+        src="plugins/slider-revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script type="text/javascript"
+        src="plugins/slider-revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript"
+        src="plugins/slider-revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript"
+        src="plugins/slider-revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script type="text/javascript"
+        src="plugins/slider-revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript"
+        src="plugins/slider-revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript"
+        src="plugins/slider-revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+</body>
+
+</html>
